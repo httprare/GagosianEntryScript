@@ -28,4 +28,6 @@ To use:
 -Thats it. Start the thing and put your number of entries in to begin.
   
   
+ Catchall Support has been added.
   
+ To use proxies with the Catchall, a have them be read by the script like this: http://ip:pass or if they're User:Pass, use is like this:  http://user:pass@ip:password

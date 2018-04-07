@@ -2,11 +2,16 @@
 24Hr Only Entry Script.
 
 Required Libraries:
-  -random
-  -time
-  -bs4
-  -string
-  -requests
+
+-random
+ 
+-time
+
+-bs4
+
+-string
+
+-requests
   
 Run this as much as you want. 
 You may change the delay near the bottom to prevent bans or not for lots of entries.

@@ -12,7 +12,8 @@ Run this as much as you want.
 You may change the delay near the bottom to prevent bans or not for lots of entries.
 If requested I can add proxy support.
 
-To use
+To use:
+
 -Make sure required libraries are installed (Uses Python 3+)
 
 -Change the email variable to whatever the beginning of your email is (Ex. testing123@gmail.com; the beginning would be 'testing123')

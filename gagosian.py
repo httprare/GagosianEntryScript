@@ -9,12 +9,15 @@ url = "https://www.gagosian.com/shop/lib/lottery-form.php"
 email = "youremailhere"
 def main():
     entries = int(input("How many Times would you like to enter?: "))
+    Size = ['XS','S','M','L','XL']
     i = 0
     while i < entries:
+        tSize = random.choice(Size)
+        print(tSize)
         entryEmail = email + "%2" + ''.join([random.choice(string.ascii_letters + string.digits) for n in range(6)])
         print(entryEmail)
         print("Entry #" + str(i) +  " of " + str(entries) + ":")
-        payload = "name=FirstName%20LastName&email=" + entryEmail + "@gmail.com&size-value=S&year=2018&lottery=yes"
+        payload = "name=FirstName%20LastName&email=" + entryEmail + "@gmail.com&size-value=" + tSize + "&year=2018&lottery=yes"
         headers = {
         'authority': "www.gagosian.com",
         'method': "POST",
@@ -35,7 +38,7 @@ def main():
         soup = BeautifulSoup(response.text, "html.parser")
         EntryNum = soup.find("strong").text
         if "Your submission number is" in response.text:
-            print("Successful Entry with Email: "+ entryEmail + "@gmail.com. Entry Number: " + EntryNum)
+            print("Successful Entry with Email: "+ entryEmail + "@gmail.com in size " + tSize +". Entry Number: " + EntryNum)
         if str(soup.find("div", attrs={'role': 'alert'})) in response.text:
             print('Duplicate Entry. Tryagain with a new set of info...')
         time.sleep(3)

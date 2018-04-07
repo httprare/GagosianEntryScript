@@ -5,8 +5,10 @@ import requests
 from bs4 import BeautifulSoup
 import string
 
+print("Gagosian script made by @404isunknown on Twitter.\nIf you use this, make sure you give me a follow.\n")
 url = "https://www.gagosian.com/shop/lib/lottery-form.php"
 email = "youremailhere"
+
 def main():
     entries = int(input("How many Times would you like to enter?: "))
     Size = ['XS','S','M','L','XL']

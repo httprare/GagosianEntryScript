@@ -41,10 +41,10 @@ def main():
         EntryNum = soup.find("strong").text
         if "Your submission number is" in response.text:
             print("Successful Entry with Email: "+ entryEmail + "@gmail.com in size " + tSize +". Entry Number: " + EntryNum)
+            i = i + 1
         if str(soup.find("div", attrs={'role': 'alert'})) in response.text:
             print('Duplicate Entry. Tryagain with a new set of info...')
         time.sleep(3)
-        i = i + 1
 
 if __name__ == '__main__':
     main()
